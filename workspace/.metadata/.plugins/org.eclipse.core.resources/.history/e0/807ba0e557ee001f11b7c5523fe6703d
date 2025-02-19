@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블 만들기</title>
+</head>
+<body>
+
+	<h3>테이블 태그</h3>
+	
+	<table border="1">
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+			<th>나이</th>
+			<th>주소</th>
+			<th rowspan="3">비고</th> <!-- 열 합치기 -->
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>서울시</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>이순신</td>
+			<td>20</td>
+			<td>서울시</td>
+		</tr>
+		<tr>
+			<td>결과</td>
+			<td colspan="3">값</td> <!-- 행 합치기 -->
+		</tr>
+	
+	</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

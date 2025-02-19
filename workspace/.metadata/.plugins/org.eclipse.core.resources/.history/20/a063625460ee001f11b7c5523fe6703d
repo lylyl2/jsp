@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h3><b>Emp 정보</b></h3>
+	
+	사원번호: <input type="text" name="number"><br>
+	이름: <input type="text" name="name"><br>
+	성별:
+	<input type="radio" name="sex">남자
+	<input type="radio" name="sex">여자
+	<br>
+	직업: <input type="text" name="job"><br>
+	상사:
+	<select name="상사">
+		<option>7369</option>
+	</select>
+	<br>
+	입사일: <input type="date" name="firstday"><br>
+	급여: <input type="text" name="salary"><br>
+	커미션: <input type="text" name="커미션"><br>
+	부서번호:
+	<select name="department_num">
+		<option>10 ACCCOUNTING NEWYORK</option>
+	</select>
+	<br>
+	
+	<input type="submit" value="저장">
+	<input type="reset" value="취소">
+	
+	
+</body>
+</html>

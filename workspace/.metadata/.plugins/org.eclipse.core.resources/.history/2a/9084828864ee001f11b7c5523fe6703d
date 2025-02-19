@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h3><b>Emp 정보</b></h3>
+	<!-- placeholder : 힌트 -->
+	사원번호: <input type="text" name="number" placeholder="100"><br>
+	이름: <input type="text" name="name" placeholder="hongkilldong"><br>
+	성별:
+	<input type="radio" name="gender">남자
+	<input type="radio" name="gender">여자
+	<br>
+	직업: <input type="text" name="job"><br>
+	상사:
+	<select name="mgr">
+		<option>7369</option>
+	</select>
+	<br>
+	입사일: <input type="date" name="firstday"><br>
+	급여: <input type="number" name="sal"><br>
+	커미션: <input type="text" name="comm"><br>
+	부서번호:
+	<select name="deptno">
+		<option>10 ACCCOUNTING NEWYORK</option>
+	</select>
+	<br>
+	
+	<input type="submit" value="저장">
+	<input type="reset" value="취소">
+	<br>
+	
+	
+	<hr>
+	<table border="1">
+		<tr>
+			<tr>사원번호: </tr>
+			<tr><input type="text" name="number"></tr>
+		</tr>
+		<tr>
+			<tr>이름: </tr>
+			<tr><input type="text" name="name"></tr>
+		</tr>
+		<tr>
+			<tr>성별: </tr>
+			<tr><input type="radio" name="gender">남자
+				<input type="radio" name="gender">여자
+			<tr/>
+		</tr>
+		<tr>
+			<tr>직업: </tr>
+			<tr><input type="text" name="job"></tr>
+		</tr>
+		
+	<br>
+	직업: <input type="text" name="job"><br>
+	상사:
+	<select name="manager">
+		<option>7369</option>
+	</select>
+	<br>
+	입사일: <input type="date" name="firstday"><br>
+	급여: <input type="text" name="salary"><br>
+	커미션: <input type="text" name="commission"><br>
+	부서번호:
+	<select name="department_num">
+		<option>10 ACCCOUNTING NEWYORK</option>
+	</select>
+	<br>
+	
+	
+	<td colspan="2" align="center">
+	
+	<input type="submit" value="저장">
+	<input type="reset" value="취소">
+	</table>
+	
+</body>
+</html>

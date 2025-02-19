@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h3>입력양식</h3>
+	
+	<!-- 사용자에게 입력받은 값을 서버에 전송하려면 form -->
+	<form>
+		
+		아이디: <input type="text" name="id"><br> <!-- input에 식별할 name은 필수! -->
+		비밀번호: <input type="password" name="pw"><br>
+		생일: <input type="date" name="birth"><br>
+		
+		<!--
+		checkbox, radio 그룹은
+		반드시 name 속성을 통일시켜 하나의 그룹으로 만듭니다
+		-->
+		
+		<!-- checkbox : 여러개 선택 가능 -->
+		관심분야:
+		<input type="checkbox" name="inter">JAVA
+		<input type="checkbox" name="inter">JSP
+		<input type="checkbox" name="inter">DB
+		<input type="checkbox" name="inter">HTML
+		
+		<br>
+		<!-- radio : 여러개 중 택1 -->
+		전공:
+		<input type="radio" name="major">국문학과
+		<input type="radio" name="major">수학과
+		<input type="radio" name="major">철학과
+		<input type="radio" name="major">경제학과
+		
+		<br>
+		<!-- radio 처럼 여러 개 중에 하나 선택 -->
+		<!-- 어차피 선택은 하나니까 select에 name 태그를 넣는다 -->
+		지역:
+		<select name="region">
+			<option>서울시</option>
+			<option>경기도</option>
+			<option>부산시</option>
+			<option>대전시</option>
+		</select>
+		
+		<br>
+		자기소개:<br>
+		<!-- text + ctrl + space + enter 단축키 -->
+		<!-- row행 크기 cols열 크기 -->
+		<textarea rows="5" cols="50" name="hello"></textarea>
+		
+		<br>
+		파일첨부:
+		<input type="file" name="file"><br>
+		<!-- value 속성에 이름을 넣을 수 있다 -->
+		<input type="reset" value="이름바꾸기"><br> <!-- 초기화버튼. name은 필요x -->
+		<!-- 아무 기능없는 버튼. 나중에 자바스크립트에서 쓸거. -->
+		<input type="button" value="버튼"><br>
+		<input type="submit">
+		
+		
+		
+	</form>
+	
+</body>
+</html>
