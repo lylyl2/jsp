@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	
+	String name = request.getParameter("name");
+	String sCm = request.getParameter("height");
+	String sKg = request.getParameter("height");
+
+	//bmi 계산
+	double cm = Double.parseDouble(sCm);
+	double kg = Double.parseDouble(sKg);
+	double bmi = kg / ((cm / 100) * (cm / 100));
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	이름: <%=name %><br>
+	키: <%=sCm %><br>
+	몸무게: <%=sKg %><br>
+	
+	BMI 지수:
+	<% if (bmi > 25) { %>
+		과체중
+	<% } else if (bmi < 18) {%>
+		저체중
+	<% } else { %>
+		정상
+	<% } %>
+	
+	<%=name %>님의 키는 <%=cm %>cm, 몸무게는 <%=kg %><br>
+	bmi 지수는 <%=bmi %>입니다.
+	
+	<% if(bmi >= 25) { %>
+		<b>과체중입니다</b>
+	<% } else if(bmi <= 18) { %>
+		<b>저체중입니다</b>
+	<% } else { %>
+		<b>정상입니다</b>
+	<% } %>
+	
+	
+</body>
+</html>

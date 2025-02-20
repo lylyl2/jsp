@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	
+	String height = request.getParameter("height");
+	String weight = request.getParameter("weight");
+	int height = Integer.parseInt(request.getParameter("height"));
+	
+	
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	
+	
+	<% double bmi = weight / ((height / 100) * (height / 100)); %>
+	
+	<% if (bmi > 25) { %>
+		과체중
+	<% } else if (bmi < 18) {%>
+		저체중
+	<% } else { %>
+		보통
+	<% } %>
+	
+</body>
+</html>
