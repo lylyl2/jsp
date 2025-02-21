@@ -2,7 +2,9 @@ package com.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,6 +21,22 @@ public class MyServlet extends HttpServlet{
 	public MyServlet() {
 		super();
 	}
+	
+	//서블릿이 생성될 때 최초에 딱 1번 실행됨
+	@Override
+	public void init() throws ServletException {
+		System.out.println("최초에 딱한번 실행됨");
+		
+		ServletContext application = getServletContext(); //<--application 객체라고 함
+		application.setAttribute("menu", Arrays.asList("홈", "등록", "구매", "관리"));
+	}
+	
+	//doGet, doPost메서드가 실행되기 이전에 실행됨
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		super.service(req, resp);
+	}
+	
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -2,6 +2,18 @@
     pageEncoding="UTF-8"%>
 <%
 	Cookie[] arr = request.getCookies();
+	String rememberMe = "";
+
+	if(arr != null) {
+		for(Cookie c : arr) {
+			
+			if(c.getName().equals("rememberMe")) {
+				rememberMe = c.getValue();
+			}
+		}
+	}
+
+	/* Cookie[] arr = request.getCookies();
 	
 	String userIdLog = "";
 	
@@ -14,7 +26,7 @@
 			}
 		}
 		
-	}
+	} */
 %>
 <!DOCTYPE html>
 <html>
@@ -32,10 +44,10 @@
 	 -->
 	
 	<form action="cookie_ex01_result.jsp" method="post"><br>
-		<input type="text" name="id" placeholder="아이디" value="<%=userIdLog %>"><br>
+		<input type="text" name="id" placeholder="아이디" value="<%=rememberMe %>"><br> <!-- placeholder은 힌트, 미리 값 가지는건 value -->
 		<input type="password" name="pw" placeholder="비밀번호"><br>
 		<input type="submit" value="쿠키로그인"><br>
-		<input type="checkbox" value="yes">아이디 기억하기
+		<input type="checkbox" name="idCheck" value="yes">아이디 기억하기
 	</form>
 	
 </body>
